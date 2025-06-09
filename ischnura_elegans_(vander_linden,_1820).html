@@ -1,0 +1,821 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ischnura elegans (Vander Linden, 1820)</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .fixed-title {
+      color: #821a33;
+      font-size: 60px;
+      font-weight: bold;
+      text-align: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      z-index: 1000;
+      padding: 10px 0;
+      font-family: 'Times New Roman', serif;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .title-bar {
+      position: fixed;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background-color: white;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 20px;
+      
+    }
+
+    .home-wrapper {
+      position: absolute;
+      left: 20px;
+    }
+
+    .home-icon {
+      width: 40px;
+      height: 40px;
+    }
+
+    .identificatore-title {
+      margin: 0 15px;
+      font-style: italic;
+    }
+
+    .data-header {
+      position: fixed;
+      top: 140px;
+      width: 100%;
+      text-align: center;
+      font-size: 24px;
+      color: #333;
+      background-color: white;
+      z-index: 998;
+      padding: 10px 0;
+      font-weight: bold;
+      
+    }
+
+    .content {
+      flex: 1;
+      padding-top: 200px;
+      padding-bottom: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .table-container {
+      overflow-y: auto;
+      max-height: calc(100vh - 300px);
+      width: 80%;
+      margin-top: 10px;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .data-table thead th {
+      position: sticky;
+      top: 0;
+      background-color: #f2f2f2;
+      z-index: 10;
+    }
+
+    .data-table th, .data-table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+
+    .gallery-button {
+      display: inline-block;
+      font-size: 18px;
+      margin: 15px;
+      padding: 10px 20px;
+      background-color: #821a33;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+
+    .footer-logos {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      background-color: white;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+      z-index: 1000;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    .footer-logos img {
+      max-height: 30px;
+      max-width: 45%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+}
+
+  </style>
+</head>
+<body>
+  <div class="fixed-title">Odonata Collection</div>
+
+  <div class="title-bar">
+    <div class="home-wrapper">
+      <a href="home.html">
+        <img src="home.png" alt="Home" class="home-icon">
+      </a>
+    </div>
+    <h1 class="identificatore-title">Ischnura elegans (Vander Linden, 1820)</h1>
+  </div>
+
+  <div class="data-header">Data</div>
+
+  <div class="content">
+    <div class="table-container">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Continent</th>
+            <th>Country</th>
+            <th>Location</th>
+            <th>Individuals</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr>
+            <td>Europe</td>
+            <td>France</td>
+            <td>Porto Vecchio, Stagni di San Cipriano</td>
+            <td>5</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Alba (AT)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Allerona, Fiume Paglia presso ponte diroccato (TR)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Ancarano, Villa Torre (TE)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Atena Lucana (PZ)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Calitri, Fiume Ofanto, Presso cava di ghiaia (AV)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Canale Monterano, Riserva naturale Fiume Rafanello (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Capalbio, Lago di Burano, Canale W (GR)</td>
+            <td>6</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Capalbio, Lago di Burano, Duna (GR)</td>
+            <td>12</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano (RM)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano, Fontanile delle Valli (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano, Stagno costiero (RM)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano, Stagno della Luce (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Città della Pieve, Località Ponticelli (PG)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Civita di Bagno, Lago di San Giovanni (AQ)</td>
+            <td>5</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Civita di Bagno, Lago di San Raniero (AQ)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Codigoro, Canale (FE)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Colfiorito, Lago (PG)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Como, Lago di Annone</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Fiume Biferno, presso viadotto Ponte Rio, SP Bifernina Km 13 (CB)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Fiume Candelaro, Ponte della strada Foggia - Manfredonia (FG)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Fiume Carapelle, Strada fra Candela e Sant'Agata (FG)</td>
+            <td>4</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Fiume Ofanto, Presso Ponte ss 98 (FG)</td>
+            <td>4</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Fiume Rio fiume, preso ponte di SP.Bifernina km1.5</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Focene (RM)</td>
+            <td>9</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Formello, Fosso della Mola (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Fossa di Paganica (AQ)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Giulianello (RM)</td>
+            <td>7</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Giulianello, Lago (RM)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Isola di Capraia, Lo Stagnone</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Lago Sant'Angelo, Sabbione, Cava di ghiaia (TR)</td>
+            <td>4</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Lago della Pieve (MC)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Lago di Collepietro (AQ)</td>
+            <td>7</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Lago di Lesina, Fosso lungo la sponda Nord (FG)</td>
+            <td>5</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Lago di Mantignano, m300 (RM)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Lago di Monterosi (VT)</td>
+            <td>6</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Lago di Narni (TR)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Lago di Rascino (RI)</td>
+            <td>14</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Lago di Vetoio (AQ)</td>
+            <td>6</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Licenza (RM)</td>
+            <td>6</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Licenza, Fiume Licenza, pozza al km 36 + 200 della ss 314 (RM)</td>
+            <td>8</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Manfredonia, 5^ vasca del Lago Salso (FG)</td>
+            <td>4</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Marta, Lago di Bolsena (VT)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Massa Marittima, Lago dell'Accesa (GR)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Monsummano, Padule di Fucecchio (LU)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Montecastrilli, Sambucetole, Laghetto in dolina (TR)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Montenero Val Cocchiara, Zittola (IS)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Montepagano di Roseto, Lago del Prete (TE)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Monterosi, Lago (VT)</td>
+            <td>5</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Monticchio, Bosco del camping (PZ)</td>
+            <td>7</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Monticchio, Lago Grande (PZ)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Monticchio, Lago Piccolo (PZ)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Murlo (SI)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Murlo, Ponte Macerato, Fiume Merse, Presso Ponte ss223 (SI)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Nettuno, Bosco di Foglino, Lago Grande (RM)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Oasi Tevere-Farfa</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Osimo, Stagno del Cimitero (AN)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Palinuro, Foce del Fiume Mingardo (SA)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Penne, Oasi WWF (PE)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Penne, Oasi WWF, Fiume Tavo (PE)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Percile, Lago Alto (RM)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Pisciarelli (RM)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Policoro, Azienda Ittica Agri, Canale di confine ESW (MT)</td>
+            <td>6</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Policoro, Foce del Fiume Agri, Pozza (MT)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Porto Badisco (LE)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Portonovo (AN)</td>
+            <td>7</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Prata D'Ansidonia, Lago del Castello (AQ)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Roma, Villa Ada</td>
+            <td>5</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>S. Demetrio Nè Vestini, Lago Sinizzo (AQ)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>SP Bifernina Km 63, Pozza a lato del Fiume Biferno (CB)</td>
+            <td>5</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>San Cataldo, "Le Cesine", Ponte Termolito (LE)</td>
+            <td>13</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Scansano, Località Pian d'Orneto, Pozza presso Torrente Trasubbie (GR)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Scansano, Località Stiacciole, Torrente Salica, ss 322 (GR)</td>
+            <td>4</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Scanzano, Litorale Policoro (MT)</td>
+            <td>6</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Sibari, Fiume Raganello, riva destra 8Km a monte SS 106 (CS)</td>
+            <td>5</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Sibari, Fosso a mare (CS)</td>
+            <td>6</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Spelronga, Lago Lungo (LT)</td>
+            <td>20</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Spelronga, Lago di San Puoto (LT)</td>
+            <td>29</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Stagno di Caporciano (AQ)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Torre Mozza (LE)</td>
+            <td>24</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Torrente Arrone (RM)</td>
+            <td>5</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Torrente Celone, ponte del raccordo FG-SS N16 (FG)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Torrita Tiberina, Fiume tevere (RM)</td>
+            <td>6</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Ugento Marina, Vasca in località Il Morfio (LE)</td>
+            <td>13</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Val d'Ala, Ceres (TO)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Valle Fiume Salinello, presso Villa Ricci (TE)</td>
+            <td>4</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Vasche di Licenza (RM)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Via Portuense, Pozza permanente tra Corviale e Ponte galeria (RM)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Villa Lago, Stagno Artificiale (AQ)</td>
+            <td>7</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+
+    <div style="text-align: center;">
+      <a class="gallery-button" href="gallery_ischnura_elegans_(vander_linden,_1820).html">Go to Gallery</a>
+    </div>
+  </div>
+
+  <!-- Loghi in basso -->
+<div class="footer-logos">
+  <a href="https://www.nbfc.it/en" target="_blank" rel="noopener noreferrer">
+    <img src="logo1.png" alt="Logo 1">
+  </a>
+  <a href="https://www.uniroma1.it" target="_blank" rel="noopener noreferrer">
+    <img src="logo2.png" alt="Logo 2">
+  </a>
+</div>
+
+</body>
+</html>
+
+    

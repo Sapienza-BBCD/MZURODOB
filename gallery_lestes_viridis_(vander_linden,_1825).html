@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery - Lestes viridis (Vander Linden, 1825)</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: Arial, sans-serif;
+    }
+
+    .fixed-title {
+      color: #821a33;
+      font-size: 60px;
+      font-weight: bold;
+      text-align: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      z-index: 1000;
+      padding: 10px 0;
+      font-family: 'Times New Roman', serif;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .main-content {
+      flex: 1;
+      padding-top: 100px;
+      text-align: center;
+    }
+
+    .title-bar {
+      position: fixed;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background-color: white;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .home-wrapper {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .home-icon {
+      width: 40px;
+      height: 40px;
+    }
+
+    .identificatore-title {
+      font-style: italic;
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .thumbnails img {
+      width: 200px;
+      margin: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .footer-logos {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      background-color: white;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+      z-index: 1000;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    .footer-logos img {
+      max-height: 30px;
+      max-width: 45%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+}
+
+  </style>
+</head>
+<body>
+  <div class="fixed-title">Odonata Collection</div>
+
+  <div class="main-content">
+    <div class="title-bar">
+      <div class="home-wrapper">
+        <a href="home.html">
+          <img src="home.png" alt="Home" class="home-icon">
+        </a>
+      </div>
+      <h1 class="identificatore-title">Gallery – <em>Lestes viridis (Vander Linden, 1825)</em></h1>
+    </div>
+
+    <div class="thumbnails">
+      
+      <a href="MZURODOB00135.html">
+        <img src="DSC_2609.jpg" alt="Thumbnail">
+      </a>
+      
+      <a href="MZURODOB00136.html">
+        <img src="DSC_2610.jpg" alt="Thumbnail">
+      </a>
+      
+      <a href="MZURODOB00137.html">
+        <img src="DSC_2611.jpg" alt="Thumbnail">
+      </a>
+      
+      <a href="MZURODOB00138.html">
+        <img src="DSC_2612.jpg" alt="Thumbnail">
+      </a>
+      
+      <a href="MZURODOB00139.html">
+        <img src="DSC_2613.jpg" alt="Thumbnail">
+      </a>
+      
+      <a href="MZURODOB00140.html">
+        <img src="DSC_2614.jpg" alt="Thumbnail">
+      </a>
+      
+      <a href="MZURODOB00141.html">
+        <img src="DSC_2615.jpg" alt="Thumbnail">
+      </a>
+      
+      <a href="MZURODOB00142.html">
+        <img src="DSC_2616.jpg" alt="Thumbnail">
+      </a>
+      
+      <a href="MZURODOB00143.html">
+        <img src="DSC_2617.jpg" alt="Thumbnail">
+      </a>
+      
+      <a href="MZURODOB00221.html">
+        <img src="DSC_2697.jpg" alt="Thumbnail">
+      </a>
+      
+      <a href="MZURODOB00222.html">
+        <img src="DSC_2698.jpg" alt="Thumbnail">
+      </a>
+      
+      <a href="MZURODOB00234.html">
+        <img src="DSC_2710.jpg" alt="Thumbnail">
+      </a>
+      
+      <a href="MZURODOB00235.html">
+        <img src="DSC_2712.jpg" alt="Thumbnail">
+      </a>
+      
+      <a href="MZURODOB00236.html">
+        <img src="DSC_2713.jpg" alt="Thumbnail">
+      </a>
+      
+      <a href="MZURODOB00237.html">
+        <img src="DSC_2714.jpg" alt="Thumbnail">
+      </a>
+      
+      <a href="MZURODOB00238.html">
+        <img src="DSC_2715.jpg" alt="Thumbnail">
+      </a>
+      
+      <a href="MZURODOB00239.html">
+        <img src="DSC_2716.jpg" alt="Thumbnail">
+      </a>
+      
+      <a href="MZURODOB00240.html">
+        <img src="DSC_2717.jpg" alt="Thumbnail">
+      </a>
+      
+      <a href="MZURODOB02022.html">
+        <img src="DSC_4592.jpg" alt="Thumbnail">
+      </a>
+      
+      <a href="MZURODOB02025.html">
+        <img src="DSC_4596.jpg" alt="Thumbnail">
+      </a>
+      
+    </div>
+  </div>
+
+  <!-- Loghi in basso -->
+<div class="footer-logos">
+  <a href="https://www.nbfc.it/en" target="_blank" rel="noopener noreferrer">
+    <img src="logo1.png" alt="Logo 1">
+  </a>
+  <a href="https://www.uniroma1.it" target="_blank" rel="noopener noreferrer">
+    <img src="logo2.png" alt="Logo 2">
+  </a>
+</div>
+
+</body>
+</html>
+    
