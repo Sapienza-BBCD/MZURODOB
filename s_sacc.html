@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .fixed-title {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 60px;
+      font-weight: bold;
+      background-color: white;
+      color: #821a33;
+      z-index: 1000;
+      font-family: 'Times New Roman', serif;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 10px 0;
+    }
+
+/* Barra identificatore */
+.title-bar {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: white;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    }
+.left-slot, .center-slot, .right-slot {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-slot {
+  justify-content: flex-start;
+}
+
+.right-slot {
+  justify-content: flex-end;
+}  
+    .home-wrapper {
+      position: absolute;
+      left: 20px;
+    }
+
+    .home-icon {
+      width: 40px;
+      height: 40px;
+    }
+
+    .identificatore-title {
+      font-style: italic;
+      font-size: 28px;
+      margin: 0;
+    }
+
+    .data-header {
+      position: fixed;
+      top: 140px;
+      width: 100%;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      background-color: white;
+      z-index: 998;
+      padding: 10px 0;
+    }
+
+    .content {
+      flex: 1;
+      padding-top: 200px; /* spazio per gli elementi fissi sopra */
+      padding-bottom: 80px; /* spazio per i loghi */
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .table-container {
+      width: 80%;
+      max-height: calc(100vh - 300px); /* Spazio visibile con header e loghi */
+      overflow-y: auto;
+      margin-top: 10px;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .data-table thead th {
+      position: sticky;
+      top: 0;
+      background-color: #f2f2f2;
+      z-index: 10;
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+    .data-table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+
+    .footer-logos {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      background-color: white;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+      z-index: 1000;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    .footer-logos img {
+      max-height: 30px;
+      max-width: 45%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+  <div class="fixed-title">Odonata Collection</div>
+
+  <div class="title-bar">
+    <div class="home-wrapper">
+      <a href="home.html"><img src="home.png" alt="Home" class="home-icon"></a>
+    </div>
+    <h1 class="identificatore-title">S. Saccà</h1>
+  </div>
+
+  <div class="data-header">Data</div>
+
+  <div class="content">
+    <div class="table-container">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Continent</th>
+            <th>Country</th>
+            <th>Location</th>
+            <th>Individuals</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Sacrofano</td>
+            <td>2</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+
+    
+  </div>
+
+  <!-- Loghi in basso -->
+<div class="footer-logos">
+  <a href="https://www.nbfc.it/en" target="_blank" rel="noopener noreferrer">
+    <img src="logo1.png" alt="Logo 1">
+  </a>
+  <a href="https://www.uniroma1.it" target="_blank" rel="noopener noreferrer">
+    <img src="logo2.png" alt="Logo 2">
+  </a>
+</div>
+
+</body>
+</html>
+
+    

@@ -1,0 +1,727 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .fixed-title {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 60px;
+      font-weight: bold;
+      background-color: white;
+      color: #821a33;
+      z-index: 1000;
+      font-family: 'Times New Roman', serif;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 10px 0;
+    }
+
+/* Barra identificatore */
+.title-bar {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: white;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    }
+.left-slot, .center-slot, .right-slot {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-slot {
+  justify-content: flex-start;
+}
+
+.right-slot {
+  justify-content: flex-end;
+}  
+    .home-wrapper {
+      position: absolute;
+      left: 20px;
+    }
+
+    .home-icon {
+      width: 40px;
+      height: 40px;
+    }
+
+    .identificatore-title {
+      font-style: italic;
+      font-size: 28px;
+      margin: 0;
+    }
+
+    .data-header {
+      position: fixed;
+      top: 140px;
+      width: 100%;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      background-color: white;
+      z-index: 998;
+      padding: 10px 0;
+    }
+
+    .content {
+      flex: 1;
+      padding-top: 200px; /* spazio per gli elementi fissi sopra */
+      padding-bottom: 80px; /* spazio per i loghi */
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .table-container {
+      width: 80%;
+      max-height: calc(100vh - 300px); /* Spazio visibile con header e loghi */
+      overflow-y: auto;
+      margin-top: 10px;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .data-table thead th {
+      position: sticky;
+      top: 0;
+      background-color: #f2f2f2;
+      z-index: 10;
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+    .data-table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+
+    .footer-logos {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      background-color: white;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+      z-index: 1000;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    .footer-logos img {
+      max-height: 30px;
+      max-width: 45%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+  <div class="fixed-title">Odonata Collection</div>
+
+  <div class="title-bar">
+    <div class="home-wrapper">
+      <a href="home.html"><img src="home.png" alt="Home" class="home-icon"></a>
+    </div>
+    <h1 class="identificatore-title">G. Carchini</h1>
+  </div>
+
+  <div class="data-header">Data</div>
+
+  <div class="content">
+    <div class="table-container">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Continent</th>
+            <th>Country</th>
+            <th>Location</th>
+            <th>Individuals</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano, Pantano Pallone (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Lauria, Lago di Rotonda (PZ)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Palinuro, Fiume Mingardo (SA)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Lago del Cerasuolo (RI)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Meduno (PN)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Monte Pollino (MT)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Auronzo, Lago di Antorno (BL)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Lago di Dobbiaco</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Torbiere d'Iseo (BS)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Torbiere d'Iseo, Località Sassabanek (BS)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>France</td>
+            <td>Landorthe, Alta Garonna</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano, Canale della Santola (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Lago Remmo (PZ)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Lago di Collepietro (AQ)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Prata D'Ansidonia, Lago del Castello (AQ)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Torre Mozza (LE)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Torbiere d'Iseo, Località Sassabanek (BS)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Torre Mozza (LE)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Torre Mozza (LE)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Alba (AT)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano, Stagno della Luce (RM)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Lago di Collepietro (AQ)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Villa Lago, Stagno Artificiale (AQ)</td>
+            <td>5</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano, Pozza T1 (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Stagno del cimitero (AQ)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Caramanico, Fiume Ofanto (PE)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Torbiere d'Iseo, Località Sassabanek (BS)</td>
+            <td>5</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Canale Monterano, Fiume Mignone (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Tromello, Canale irriguo (PV)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Alba (AT)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Atena Lucana (PZ)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano (RM)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano, Stagno costiero (RM)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano, Stagno della Luce (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Civita di Bagno, Lago di San Giovanni (AQ)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Lago della Pieve (MC)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Palinuro, Foce del Fiume Mingardo (SA)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Policoro, Azienda Ittica Agri, Canale di confine ESW (MT)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Torre Mozza (LE)</td>
+            <td>18</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Villa Lago, Stagno Artificiale (AQ)</td>
+            <td>7</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td></td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Fiume Elutero (PA)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Campo Felice, Lago (AQ)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Modena, dintorni</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano (RM)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Lauria, Lago di Rotonda (PZ)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Monte Pollino (MT)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Palinuro, Fiume Mingardo (SA)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Monte Pollino (MT)</td>
+            <td>6</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Palinuro, Fiume Mingardo (SA)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano (RM)</td>
+            <td>8</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>San Cataldo, "Le Cesine", Cava Tagliaredde (LE)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>San Cataldo, "Le Cesine", Stagno Tagliaredde (LE)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Canale Monterano, Fiume Mignone (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Palinuro, Fiume Mingardo (SA)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Roma</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Roma, Tor di Quinto</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Fiume Simeto, Zona industriale (CT)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Meduno (PN)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Palinuro, Fiume Mingardo (SA)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Villa Lago, Stagno Artificiale (AQ)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Auronzo, Lago di Antorno (BL)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Lago di Cei (TN)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Lago Bordino, Km 11 da Paceco (TP)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Meduno (PN)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Campo Imperatore, Lago di Raccollo (AQ)</td>
+            <td>4</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Campo Imperatore, Lago di San Pietro (AQ)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano (RM)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano (RM)</td>
+            <td>9</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Marina di Camerota, Fiume Mingarolo</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Meduno (PN)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Monte Pollino, Serra delle Ciavole (MT)</td>
+            <td>2</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+
+    
+  </div>
+
+  <!-- Loghi in basso -->
+<div class="footer-logos">
+  <a href="https://www.nbfc.it/en" target="_blank" rel="noopener noreferrer">
+    <img src="logo1.png" alt="Logo 1">
+  </a>
+  <a href="https://www.uniroma1.it" target="_blank" rel="noopener noreferrer">
+    <img src="logo2.png" alt="Logo 2">
+  </a>
+</div>
+
+</body>
+</html>
+
+    

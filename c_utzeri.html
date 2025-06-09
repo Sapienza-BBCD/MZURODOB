@@ -1,0 +1,2610 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .fixed-title {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 60px;
+      font-weight: bold;
+      background-color: white;
+      color: #821a33;
+      z-index: 1000;
+      font-family: 'Times New Roman', serif;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 10px 0;
+    }
+
+/* Barra identificatore */
+.title-bar {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: white;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    }
+.left-slot, .center-slot, .right-slot {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-slot {
+  justify-content: flex-start;
+}
+
+.right-slot {
+  justify-content: flex-end;
+}  
+    .home-wrapper {
+      position: absolute;
+      left: 20px;
+    }
+
+    .home-icon {
+      width: 40px;
+      height: 40px;
+    }
+
+    .identificatore-title {
+      font-style: italic;
+      font-size: 28px;
+      margin: 0;
+    }
+
+    .data-header {
+      position: fixed;
+      top: 140px;
+      width: 100%;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      background-color: white;
+      z-index: 998;
+      padding: 10px 0;
+    }
+
+    .content {
+      flex: 1;
+      padding-top: 200px; /* spazio per gli elementi fissi sopra */
+      padding-bottom: 80px; /* spazio per i loghi */
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .table-container {
+      width: 80%;
+      max-height: calc(100vh - 300px); /* Spazio visibile con header e loghi */
+      overflow-y: auto;
+      margin-top: 10px;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .data-table thead th {
+      position: sticky;
+      top: 0;
+      background-color: #f2f2f2;
+      z-index: 10;
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+    .data-table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+
+    .footer-logos {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      background-color: white;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+      z-index: 1000;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    .footer-logos img {
+      max-height: 30px;
+      max-width: 45%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+  <div class="fixed-title">Odonata Collection</div>
+
+  <div class="title-bar">
+    <div class="home-wrapper">
+      <a href="home.html"><img src="home.png" alt="Home" class="home-icon"></a>
+    </div>
+    <h1 class="identificatore-title">C. Utzeri</h1>
+  </div>
+
+  <div class="data-header">Data</div>
+
+  <div class="content">
+    <div class="table-container">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Continent</th>
+            <th>Country</th>
+            <th>Location</th>
+            <th>Individuals</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano (RM)</td>
+            <td>5</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano, Fontanile delle Valli (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano, P1 (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano, Piscina di Vetrica (RM)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano, T46 (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Lago di Vico, Caprarola (VT)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Canale Monterano, Riserva naturale Fiume Rafanello (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Capestrano (AQ)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano, Pozza del Figurone (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano, Strada bianca presso pozza T21 (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Formello, Fosso della Mola (RM)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Gallese</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Licenza, Fiume Licenza, pozza al km 36 + 200 della ss 314 (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Monticiano (SI)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Prata D'Ansidonia, Lago del Castello (AQ)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Trevi (PG)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Valle Fiume Salinello, presso Villa Ricci (TE)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Murlo (SI)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>France</td>
+            <td>Ostriconi</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Allerona, Fiume Paglia presso ponte diroccato (TR)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano (RM)</td>
+            <td>6</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano, P21 (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Codigoro, Canale (FE)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Formello, Fosso della Mola (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Giulianello (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Lama, Iesa - Monticiano, Strada per Fiume Farma (GR)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Massa Marittima, Lago dell'Accesa (GR)</td>
+            <td>6</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Monterosi, Lago (VT)</td>
+            <td>4</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Monticiano, Fiume Gonna, Presso Ponte della Strada Iesa - Monticiano (SI)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Nazzano, foce del Fiume Farfa nel Tevere</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Roccastrada, Torrente Farma sotto il ponte della strada Meleta - Gabellino (GR)</td>
+            <td>4</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>San Cataldo, "Le Cesine", Cava Tagliaredde (LE)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Spelronga, Lago Lungo (LT)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Torre Mozza (LE)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano, Piscina di Vetrica (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Torrente Celone, ponte del raccordo FG-SS N16 (FG)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano (RM)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Campo Imperatore, Lago di Fugno (AQ)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Fiume Candelaro, Ponte della strada Foggia - Manfredonia (FG)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Licenza, Fiume Licenza, pozza al km 36 + 200 della ss 314 (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Manfredonia, 5^ vasca del Lago Salso (FG)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Pisciarelli (RM)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Rocca di Mezzo, Lago del Sirente (AQ)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Rovine di Tharros (OR)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Scansano, Località Pian d'Orneto (GR)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Torrente Celone (FG)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Ugento Marina, Vasca in località Il Morfio (LE)</td>
+            <td>6</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Ugento, Torrente San Giovanni, Canale della vasca murata (LE)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Via Portuense, Pozza permanente tra Corviale e Ponte galeria (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Villasimius, Rio Trotta (CA)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Villasimius, Strada c/o Su Campus</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>France</td>
+            <td>Ostriconi</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano, T21 (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Giulianello (RM)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Lioento, Vasca di bonifica in località Il Morfio (LE)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Manfredonia, 5^ vasca del Lago Salso (FG)</td>
+            <td>7</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>MaracaLagonis, Canale presso SS 125, km 11 (CA)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Spelronga, Lago di San Puoto (LT)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Villasimius, Rio Foxi (CA)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Canale Monterano, Fiume Mignone (RM)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Fiume Mignone confluente Fiume Lenta</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Formello, Fosso della Mola (RM)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Monticiano, Torrente Ornate, presso ponte SS 223 (SI)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Roccastrada, Torrente Farma sotto il ponte della strada Meleta - Gabellino (GR)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Buonfornello, Fiume Grande (PA)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Fiume Biferno, presso viadotto Ponte Rio, SP Bifernina Km 13 (CB)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Fiume Farma, Sotto ponte ss 73 (GR)</td>
+            <td>5</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Fiume Salto, Pozza a lato del fiume 2Km a valle della diga (RI)</td>
+            <td>6</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Fiume Vomano, Parco dopo bivio per Campotosto, Località Porcinaro (AQ)</td>
+            <td>10</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Monticiano, Fiume Gonna, Presso Ponte della Strada Iesa - Monticiano (SI)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Oriolo Romano, Fiume Mignone, La Mola (VT)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Percile, Molino (RM)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Roccastrada, Torrente Farma sotto il ponte della strada Meleta - Gabellino (GR)</td>
+            <td>5</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Vetralla, Fosso Biedano (VT)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Canale Monterano, Riserva naturale Fiume Rafanello (RM)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Canale Monterano, Riserva naturale Fiume Rafanello (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano (RM)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castiadas, Rio Corr'è Pruna, 93m slm</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Focene (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Lago di Lesina, Fosso lungo la sponda Nord (FG)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Lago di Monterosi (VT)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Lesina, Fosso (FG)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Salci, Cisterna presso Torre Fossalto (PG)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Scansano, Località Pian d'Orneto, Pozza presso Torrente Trasubbie (GR)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Ugento Marina, Vasca in località Il Morfio (LE)</td>
+            <td>4</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Villa San Pietro, Laghetto (CA)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castiadas, Rio Corr'è Pruna, 93m slm</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Baccinello, Scansano (GR)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Affluente Fiume Paglia, SP44, Km 2+300 (TR)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Fiume Ofanto, Strada Candela-Melfi (FG)</td>
+            <td>4</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Lesina, Fosso (FG)</td>
+            <td>4</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>SP Bifernina Km 63, Pozza a lato del Fiume Biferno (CB)</td>
+            <td>12</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Scansano, Località Pian d'Orneto, Pozza presso Torrente Trasubbie (GR)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Torrente Celone, ponte del raccordo FG-SS N16 (FG)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Torrente Saccione, presso ponte d. SS N 16 (BA)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Blera, Civitella Cesi, Passo di Viterbo (VT)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano, Località Le Valli (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Torrente Saccione, presso ponte d. SS N 16 (BA)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Via Portuense, Pozza permanente tra Corviale e Ponte galeria (RM)</td>
+            <td>6</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Via Tiburtina, Località Pisciarelli, Pozza permanente (RM)</td>
+            <td>6</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Borgo San Pietro, Lago Piccolo d. Piano di Aquilente (RI)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano (RM)</td>
+            <td>4</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Colfiorito, Lago (PG)</td>
+            <td>9</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Fiume Rio fiume, preso ponte di SP.Bifernina km1.5</td>
+            <td>4</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Fiume Salto, Pozza a lato del fiume 2Km a valle della diga (RI)</td>
+            <td>5</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Giulianello (RM)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Lago del Sirente (AQ)</td>
+            <td>4</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Lago di Rascino (RI)</td>
+            <td>17</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Lago di Vetoio (AQ)</td>
+            <td>8</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Licenza, Fiume Licenza, pozza al km 36 + 200 della ss 314 (RM)</td>
+            <td>4</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Rocca di Mezzo (AQ)</td>
+            <td>4</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Rocca di Mezzo, Lago del Sirente (AQ)</td>
+            <td>4</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Roccastrada, Belagaio, Lago Troscia (GR)</td>
+            <td>4</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Salci, Cisterna presso Torre Fossalto (PG)</td>
+            <td>8</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Scansano, Località Pian d'Orneto, Pozza presso Torrente Trasubbie (GR)</td>
+            <td>4</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Monticchio, Lago Grande (PZ)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Monticchio, Lago Piccolo (PZ)</td>
+            <td>14</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Canale Monterano, Riserva naturale Fiume Rafanello (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano (RM)</td>
+            <td>5</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Colfiorito (PG)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Licenza, Fiume Licenza, pozza al km 36 + 200 della ss 314 (RM)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Rocca di Mezzo, Lago del Sirente (AQ)</td>
+            <td>9</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Via Portuense, Pozza permanente tra Corviale e Ponte galeria (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Morigerati, Affluente destro Fiume Bussento, ponte strada Sicilì-Morigerati (SA)</td>
+            <td>4</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Casamassima, Contrada Contefino, Vasca artificiale (BA)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano, Camilletto (Stagno Grande) (RM)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano, Canale della Santola (RM)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano, Piscina di Vetrica (RM)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano, Piscina in Piana dei Daini (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano, Stagno P5 (RM)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Fiume Candelaro, Ponte della strada Foggia - Manfredonia (FG)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Fiume Ofanto, Strada Candela-Melfi (FG)</td>
+            <td>6</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Giulianello (RM)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Lago di Lesina, Fosso lungo la sponda Nord (FG)</td>
+            <td>5</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Manfredonia, 5^ vasca del Lago Salso (FG)</td>
+            <td>4</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Monterosi, Lago (VT)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Torrente Celone, ponte del raccordo FG-SS N16 (FG)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Ugento Marina, Vasca in località Il Morfio (LE)</td>
+            <td>9</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Ugento, Torrente San Giovanni, Canale della vasca murata (LE)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Borgorose, Montagne della Duchessa, Lago della Duchessa</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Canale Monterano, Riserva naturale Fiume Rafanello (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Monte Rufeno, Acquapendente, Torrente Tirolle (VT)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Canale Monterano, Riserva naturale Fiume Rafanello (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Blera, Civitella Cesi, Passo di Viterbo (VT)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Formello, Fosso della Mola (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Vetralla, Località Casalone, Fosso Biedano (VT)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>France</td>
+            <td>Porto Vecchio, Stagni di San Cipriano</td>
+            <td>5</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Allerona, Fiume Paglia presso ponte diroccato (TR)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Calitri, Fiume Ofanto, Presso cava di ghiaia (AV)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Canale Monterano, Riserva naturale Fiume Rafanello (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano, Fontanile delle Valli (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Civita di Bagno, Lago di San Giovanni (AQ)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Codigoro, Canale (FE)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Colfiorito, Lago (PG)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Fiume Candelaro, Ponte della strada Foggia - Manfredonia (FG)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Fiume Carapelle, Strada fra Candela e Sant'Agata (FG)</td>
+            <td>4</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Fiume Ofanto, Presso Ponte ss 98 (FG)</td>
+            <td>4</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Fiume Rio fiume, preso ponte di SP.Bifernina km1.5</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Focene (RM)</td>
+            <td>6</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Formello, Fosso della Mola (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Giulianello (RM)</td>
+            <td>7</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Giulianello, Lago (RM)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Lago di Collepietro (AQ)</td>
+            <td>4</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Lago di Lesina, Fosso lungo la sponda Nord (FG)</td>
+            <td>5</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Lago di Rascino (RI)</td>
+            <td>13</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Lago di Vetoio (AQ)</td>
+            <td>6</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Licenza, Fiume Licenza, pozza al km 36 + 200 della ss 314 (RM)</td>
+            <td>8</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Manfredonia, 5^ vasca del Lago Salso (FG)</td>
+            <td>4</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Marta, Lago di Bolsena (VT)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Massa Marittima, Lago dell'Accesa (GR)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Montecastrilli, Sambucetole, Laghetto in dolina (TR)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Montepagano di Roseto, Lago del Prete (TE)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Monterosi, Lago (VT)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Monticchio, Bosco del camping (PZ)</td>
+            <td>7</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Monticchio, Lago Grande (PZ)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Monticchio, Lago Piccolo (PZ)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Murlo (SI)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Murlo, Ponte Macerato, Fiume Merse, Presso Ponte ss223 (SI)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Pisciarelli (RM)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Policoro, Azienda Ittica Agri, Canale di confine ESW (MT)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>SP Bifernina Km 63, Pozza a lato del Fiume Biferno (CB)</td>
+            <td>5</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Scansano, Località Pian d'Orneto, Pozza presso Torrente Trasubbie (GR)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Scansano, Località Stiacciole, Torrente Salica, ss 322 (GR)</td>
+            <td>4</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Torre Mozza (LE)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Torrente Celone, ponte del raccordo FG-SS N16 (FG)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Torrita Tiberina, Fiume tevere (RM)</td>
+            <td>6</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Ugento Marina, Vasca in località Il Morfio (LE)</td>
+            <td>10</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Via Portuense, Pozza permanente tra Corviale e Ponte galeria (RM)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Catenanuova, Lago (CT)</td>
+            <td>5</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Ispica, Lago presso Punta Castellazzo (RG)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Ispica, Pantano Salitiello (RG)</td>
+            <td>4</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>MaracaLagonis, Canale presso SS 125, km 11 (CA)</td>
+            <td>6</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Villa San Pietro, Laghetto (CA)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Villasimius (CA)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Borgo San Pietro, Lago Piccolo d. Piano di Aquilente (RI)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Monticiano, Torrente Ornate, presso ponte SS 223 (SI)</td>
+            <td>4</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Murlo, Ponte Macerato, Fiume Merse, Presso Ponte ss223 (SI)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Canale Monterano, Riserva naturale Fiume Rafanello (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano, Piscina di Vetrica (RM)</td>
+            <td>6</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Cerignola, Zapponeta, Vasche di ittiocoltura e piano adiacente (FG)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Ispica, Pantano Salitiello (RG)</td>
+            <td>6</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Lago di Lesina, Tombolo, Pozza temporanea (FG)</td>
+            <td>6</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Pachino, Pantano Cuba (SR)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Rocca di Mezzo, Lago del Sirente (AQ)</td>
+            <td>5</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Rocca di Mezzo, Laghetto in vaca di ghiaia (AQ)</td>
+            <td>4</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Torrente Saccione, presso ponte d. SS N 16 (BA)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Allerona, Fiume Paglia presso ponte diroccato (TR)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano (RM)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano, Piscina di Vetrica (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano, T21 (RM)</td>
+            <td>23</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Isola di San Pietro, Stagno di Cala Vinagra (CA)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Roccastrada, Pozza presso SS 73 (GR)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Monte Rufeno, Acquapendente, Torrente Tirolle (VT)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Allerona, Fiume Paglia presso ponte diroccato (TR)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Allerona, Fiume Ritorto (TR)</td>
+            <td>6</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Calitri, Fiume Ofanto, Presso cava di ghiaia (AV)</td>
+            <td>4</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Canale Fiume Carapelle</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Canale Monterano, Fiume Mignone (RM)</td>
+            <td>8</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Civitavecchia, Fiume Mignone, Presso il Ponte sulla ss Aurelia (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Confluenza Fiume Farma - Fiume Merse</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Fiumara Arcidiaconata, presso foce in località Abate Alonia (PZ)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Fiume Farma, Sotto ponte ss 73 (GR)</td>
+            <td>5</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Marina di Camerota, Fiume Mingarolo</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Monticiano, Fiume Gonna, Presso Ponte della Strada Iesa - Monticiano (SI)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Monticiano, Fiume Merse, Località Mallecchi (SI)</td>
+            <td>5</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Monticiano, Fiume Merse, Presso ss73 (SI)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Murlo, Ponte Macerato, Fiume Merse, Presso Ponte ss223 (SI)</td>
+            <td>5</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Oriolo Romano (VT)</td>
+            <td>4</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Oriolo Romano, Fiume Mignone, La Mola (VT)</td>
+            <td>4</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Roccastrada, Torrente Farma sotto il ponte della strada Meleta - Gabellino (GR)</td>
+            <td>6</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Rota, Località Riparossa, Fiume Mignone (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Torrente Celone, ponte del raccordo FG-SS N16 (FG)</td>
+            <td>6</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Vetralla, Fosso Biedano (VT)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Oriolo Romano, Fiume Mignone, La Mola (VT)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Roccastrada, Torrente Farma sotto il ponte della strada Meleta - Gabellino (GR)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Rota, Località Riparossa, Fiume Mignone (RM)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Vetralla, Località Casalone, Fosso Biedano (VT)</td>
+            <td>6</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Allerona, Fiume Paglia presso ponte diroccato (TR)</td>
+            <td>6</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Allerona, Fiume Ritorto (TR)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Calabritto, Fiume Temete (AV)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano, Camilletto (Stagno Grande) (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano, Canale della Santola (RM)</td>
+            <td>10</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano, V. Renaro (RM)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Fiumara Arcidiaconata, presso foce in località Abate Alonia (PZ)</td>
+            <td>4</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Fiume Farma, Sotto ponte ss 73 (GR)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Fiume Ofanto, Strada Candela-Melfi (FG)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Giulianello (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Lago di Giulianello (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Lesina, Fosso (FG)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Monticiano, Località, Mallecchi, presso Fiume Merse (SI)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Ponte della ss 17 al confine tra Puglia e Molise</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>SP Bifernina Km 63, Pozza a lato del Fiume Biferno (CB)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>SP Foggia - Candela, presso ponte km 24,500 su affluente del Fiume Carapelle</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Torrente Celone, ponte del raccordo FG-SS N16 (FG)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Ugento Marina, Vasca in località Il Morfio (LE)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Lago di Vico, Caprarola (VT)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Lago di Vico, Caprarola (VT)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Santa Marinella, Macchiatonda (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Blera, Civitella Cesi, Passo di Viterbo (VT)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Oriolo Romano, Fiume Mignone, La Mola (VT)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Roccastrada, Torrente Farma sotto il ponte della strada Meleta - Gabellino (GR)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Aguzzo, Narni (TR)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Allerona, Fiume Paglia presso ponte diroccato (TR)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Auletta, Fiume Tanagro (SA)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Calabritto, Fiume Temete (AV)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Calitri, Fiume Ofanto, Presso cava di ghiaia (AV)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Canale Monterano, Fiume Mignone (RM)</td>
+            <td>4</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Fiume Biferno, presso viadotto Ponte Rio, SP Bifernina Km 13 (CB)</td>
+            <td>8</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Fiume Ofanto (FG)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Formello (RM)</td>
+            <td>5</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Giulianello (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Grosseto (GR)</td>
+            <td>8</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Licenza (RM)</td>
+            <td>8</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Montecastrilli, Sambucetole, Laghetto in dolina (TR)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Monticchio, Bosco del camping (PZ)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Monticchio, Lago Grande (PZ)</td>
+            <td>12</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Murlo, Ponte Macerato, Fiume Merse (SI)</td>
+            <td>4</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Oriolo Romano (VT)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Orvieto, Monte Rubiaglio (TR)</td>
+            <td>4</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Pisciarelli (RM)</td>
+            <td>4</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Policoro, Foce del Fiume Agri, Pozza (MT)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Roccastrada (GR)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>SP Bifernina Km 71,8, Fiume Biferno (CB)</td>
+            <td>8</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Sambuci (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Scansano (GR)</td>
+            <td>5</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Siena (SI)</td>
+            <td>5</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Torrente Celone, ponte del raccordo FG-SS N16 (FG)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Torrente Saccione, presso ponte d. SS N 16 (BA)</td>
+            <td>6</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Fiume Salto, Pozza a lato del fiume 2Km a valle della diga (RI)</td>
+            <td>5</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Monte Rufeno, Acquapendente, Torrente Tirolle (VT)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Austria</td>
+            <td>Vienna, Stockerau, Giessgang, Grafenstein</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Paternò, Fiume Simeto (CT)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>SP Bifernina Km 63, Pozza a lato del Fiume Biferno (CB)</td>
+            <td>4</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Campo Imperatore, Lago di Passaneta (AQ)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Lago di Rascino (RI)</td>
+            <td>4</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Rocca di Mezzo, Lago del Sirente (AQ)</td>
+            <td>9</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Borgorose, Montagne della Duchessa, Lago della Duchessa</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Casamassima, Contrada Contefino, Vasca artificiale (BA)</td>
+            <td>4</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano (RM)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano, Piscina in Piana dei Daini (RM)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Cesaro, Biviere di Cesaro (ME)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Confluente Fiume Mase</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Favignana (sulla MN Bannock)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Fiumara Arcidiaconata, presso foce in località Abate Alonia (PZ)</td>
+            <td>7</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Fiume Vomano, Parco dopo bivio per Campotosto, Località Porcinaro (AQ)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Giulianello (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Ispica, Pantano Longarini (RG)</td>
+            <td>6</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Ispica, Pantano Salitiello (RG)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Lago di Lesina, Fosso lungo la sponda Nord (FG)</td>
+            <td>6</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Manfredonia, 5^ vasca del Lago Salso (FG)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Montepagano di Roseto, Lago del Prete (TE)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Monticiano, Località, Mallecchi, presso Fiume Merse (SI)</td>
+            <td>4</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Murlo, Ponte Macerato, Fiume Merse, Presso Ponte ss223 (SI)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Torre Guaceto, Lato a mare della strada 379, Palude (BR)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Trevi nel Lazio, Monti Simbruni (FR)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Ugento Marina, Vasca in località Il Morfio (LE)</td>
+            <td>20</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Ugento, Torrente San Giovanni, Canale della vasca murata (LE)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Villasimius, Rio Foxi (CA)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Barbarano Romano, Marturanum, Torrente Vesca (VT)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Macchiatonda (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Romania</td>
+            <td>tra Tulcea e Murighiol</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Lago di Vico, Caprarola (VT)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano (RM)</td>
+            <td>11</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Castel Porziano, Canale della Santola (RM)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Civita di Bagno, Lago di San Raniero (AQ)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Fiumara Arcidiaconata, presso foce in località Abate Alonia (PZ)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Fiume Ofanto, Strada Candela-Melfi (FG)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Manziana, Fiume Mignone (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Massa Marittima, Lago dell'Accesa (GR)</td>
+            <td>4</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Monte Rufeno, Acquapendente, Torrente Tirolle (VT)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Montecastrilli, Sambucetole, Laghetto in dolina (TR)</td>
+            <td>4</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Monterosi, Lago (VT)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Monticiano, Fiume Gonna, Presso Ponte della Strada Iesa - Monticiano (SI)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Pisciarelli (RM)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Rocca di Mezzo, Lago del Sirente (AQ)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Roccastrada, Belagaio, Lago Troscia (GR)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Roccastrada, Torrente Farma sotto il ponte della strada Meleta - Gabellino (GR)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>San Demetrio ne' Vestini, Lago Sinizzo (AQ)</td>
+            <td>3</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Spelronga, Lago Lungo (LT)</td>
+            <td>1</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Torre Guaceto, Lato a mare della strada 379, Palude (BR)</td>
+            <td>2</td>
+          </tr>
+          
+          <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Valle Fiume Salinello, presso Villa Ricci (TE)</td>
+            <td>4</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+
+    
+  </div>
+
+  <!-- Loghi in basso -->
+<div class="footer-logos">
+  <a href="https://www.nbfc.it/en" target="_blank" rel="noopener noreferrer">
+    <img src="logo1.png" alt="Logo 1">
+  </a>
+  <a href="https://www.uniroma1.it" target="_blank" rel="noopener noreferrer">
+    <img src="logo2.png" alt="Logo 2">
+  </a>
+</div>
+
+</body>
+</html>
+
+    
